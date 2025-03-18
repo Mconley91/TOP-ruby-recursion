@@ -1,9 +1,12 @@
-def merge_sort(array)
-  if array.length <= 1
-    return array
+def merge_sort(arr,accumulator = [])
+  if arr.length == 1
+    return arr
   else
+    arr1 = merge_sort(arr[..arr.length/2-1],accumulator)
+    arr2 = merge_sort(arr[arr.length/2..],accumulator)
+    p "#{arr1} --&-- #{arr2}"
     
   end
 end
 
-merge_sort([3, 2, 1, 13, 8, 5, 0, 1])
+p "RETURN VALUE: #{merge_sort([3, 2, 1, 13, 8, 5, 0, 1])}"
