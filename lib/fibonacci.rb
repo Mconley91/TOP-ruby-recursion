@@ -8,6 +8,7 @@ end
 p "#{fibs(8)} Iterative, yay!"
 
 def fibs_rec(num, arr = [0,1])
+  puts 'This was printed recursively'
   if arr.length < num
     arr << arr[-2] + arr[-1]
     fibs_rec(num,arr)
